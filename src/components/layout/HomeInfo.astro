@@ -27,10 +27,12 @@ const tags = getAllTags(posts);
 
 const allTags = Object.entries(tags).map(([tag, count]) => ({ tag, count }));
 
+// [ID] Menghasilkan awalan ID unik
 // 生成唯一 ID 前缀
 const uniqueId = `home-info-${Math.random().toString(36).substring(2, 11)}`;
 const { className } = Astro.props;
 
+// [ID] Filter item navigasi untuk mengecualikan seri yang dinonaktifkan
 // Filter navigation items to exclude disabled series
 const filteredRouters = filterNavItems(routers, configuredSeriesSlugs, enabledSeriesSlugs, RESERVED_ROUTES);
 const strippedPath = stripLocaleFromPath(Astro.url.pathname);
@@ -54,21 +56,22 @@ const strippedPath = stripLocaleFromPath(Astro.url.pathname);
   <div
     class="text-muted-foreground mt-3 flex justify-center text-center text-sm/4 whitespace-nowrap select-none dark:text-white/80"
   >
-    <a href={localizedPath('/', locale)} class="hover:text-blue flex cursor-pointer flex-col gap-2 p-1 transition">
+    <!-- [ID] Statistik Artikel (Menggunakan ikon dokumen/quill) -->
+    <a href={localizedPath('/', locale)} aria-label={t(locale, 'homeInfo.articles')} class="hover:text-blue flex cursor-pointer flex-col items-center gap-2 p-1 transition">
       <span class="text-lg/5 font-bold">{postCount}</span>
-      {t(locale, 'homeInfo.articles')}
+      <Icon name="ri:quill-pen-line" class="size-4" />
     </a>
     <div class="bg-muted-foreground mx-3 w-px"></div>
-    <a href={localizedPath('/categories', locale)} aria-label={t(locale, 'homeInfo.categories')} class="hover:text-blue">
-      <p class="flex cursor-pointer flex-col gap-2 p-1 transition">
-        <span class="text-lg/5 font-bold">{Object.keys(countMap).length}</span>
-        {t(locale, 'homeInfo.categories')}
-      </p>
+    <!-- [ID] Statistik Kategori (Menggunakan ikon grid) -->
+    <a href={localizedPath('/categories', locale)} aria-label={t(locale, 'homeInfo.categories')} class="hover:text-blue flex cursor-pointer flex-col items-center gap-2 p-1 transition">
+      <span class="text-lg/5 font-bold">{Object.keys(countMap).length}</span>
+      <Icon name="ri:grid-fill" class="size-4" />
     </a>
     <div class="bg-muted-foreground mx-3 w-px"></div>
-    <a href={localizedPath('/tags', locale)} class="hover:text-blue flex cursor-pointer flex-col gap-2 p-1 transition">
+    <!-- [ID] Statistik Tag (Menggunakan ikon tag) -->
+    <a href={localizedPath('/tags', locale)} aria-label={t(locale, 'homeInfo.tags')} class="hover:text-blue flex cursor-pointer flex-col items-center gap-2 p-1 transition">
       <span class="text-lg/5 font-bold">{allTags?.length ?? 0}</span>
-      {t(locale, 'homeInfo.tags')}
+      <Icon name="ri:price-tag-3-line" class="size-4" />
     </a>
   </div>
   <div class="mt-6 flex w-full flex-col items-center gap-2.5">
@@ -146,6 +149,7 @@ const strippedPath = stripLocaleFromPath(Astro.url.pathname);
 </div>
 
 <style>
+  /* [ID] Animasi dropdown menggunakan teknik CSS Grid untuk transisi tinggi yang halus */
   /* 折叠动画使用 CSS Grid 技巧实现平滑的高度过渡 */
   [data-collapse-content] {
     display: grid;
@@ -161,6 +165,7 @@ const strippedPath = stripLocaleFromPath(Astro.url.pathname);
     grid-template-rows: 0fr;
   }
 
+  /* [ID] Terapkan animasi hanya jika pengguna tidak mengatur prefers-reduced-motion */
   /* 只在用户未设置 reduce-motion 时应用动画 */
   @media (prefers-reduced-motion: no-preference) {
     [data-collapse-content] {
@@ -172,6 +177,7 @@ const strippedPath = stripLocaleFromPath(Astro.url.pathname);
   let collapseMutationObserver: MutationObserver | null = null;
 
   function initCollapsible() {
+    // [ID] Cari semua wadah HomeInfo
     // 找到所有 HomeInfo 容器
     const containers = document.querySelectorAll('[data-home-info-container]');
 
@@ -182,10 +188,12 @@ const strippedPath = stripLocaleFromPath(Astro.url.pathname);
         const targetId = trigger.getAttribute('data-collapse-trigger');
         if (!targetId) return;
 
+        // [ID] Periksa apakah sudah diinisialisasi
         // 检查是否已经初始化过
         if (trigger.hasAttribute('data-initialized')) return;
         trigger.setAttribute('data-initialized', 'true');
 
+        // [ID] Cari elemen terkait di dalam wadah saat ini
         // 在当前容器内查找对应的元素
         const content = container.querySelector(`[data-collapse-content="${targetId}"]`) as HTMLElement;
         const icon = trigger.querySelector(`[data-collapse-icon="${targetId}"]`) as HTMLElement;
@@ -199,11 +207,13 @@ const strippedPath = stripLocaleFromPath(Astro.url.pathname);
           const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
 
           if (isExpanded) {
+            // [ID] Lipat / Tutup
             // 折叠
             content.classList.add('collapse-hidden');
             icon.style.transform = 'rotate(0deg)';
             trigger.setAttribute('aria-expanded', 'false');
           } else {
+            // [ID] Buka / Perluas
             // 展开
             content.classList.remove('collapse-hidden');
             icon.style.transform = 'rotate(180deg)';
@@ -222,9 +232,11 @@ const strippedPath = stripLocaleFromPath(Astro.url.pathname);
   }
 
   function setupObserver() {
+    // [ID] Bersihkan pengamat lama terlebih dahulu
     // 先清理旧的观察器
     cleanupObserver();
 
+    // [ID] Mendukung pemuatan tertunda MobileDrawer
     // 支持 MobileDrawer 延迟加载
     collapseMutationObserver = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
@@ -240,6 +252,7 @@ const strippedPath = stripLocaleFromPath(Astro.url.pathname);
     });
   }
 
+  // [ID] Inisialisasi
   // 初始化
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
@@ -251,12 +264,14 @@ const strippedPath = stripLocaleFromPath(Astro.url.pathname);
     setupObserver();
   }
 
+  // [ID] Mendukung transisi tampilan Astro
   // 支持 Astro 的视图过渡
   document.addEventListener('astro:page-load', () => {
     initCollapsible();
     setupObserver();
   });
 
+  // [ID] Bersihkan pengamat sebelum perpindahan halaman
   // 页面切换前清理观察器
   document.addEventListener('astro:before-swap', cleanupObserver);
 </script>

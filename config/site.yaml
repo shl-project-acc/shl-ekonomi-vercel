@@ -11,23 +11,25 @@
 # Site Basic Information
 # =============================================================================
 site:
-  title: 余弦の博客 # 网站名称
-  alternate: cosine # 网站英文名称 用于页脚、Logo、@ handle 等
-  subtitle: WA 的一声就哭了 # 网站副标题
-  name: cos # 作者名称 - 请修改为你的名字
-  description: 一个基于 Astro 的现代化博客主题 # 网站描述
-  avatar: /img/avatar.webp # 网站头像
+  title: shl project # 网站名称 [ID] UBAH: Ganti dengan Nama Web Anda
+  alternate: syahril # 网站英文名称 用于页脚、Logo、@ handle 等 [ID] UBAH: Nama alternatif (bisa pakai nama Anda)
+  subtitle: Catatan Pribadi dan Artikel # 网站副标题 [ID] UBAH: Slogan atau Sub-judul web Anda
+  name: SHL # 作者名称 - 请修改为你的名字 [ID] UBAH: Nama panggilan Anda
+  description: Dari Ilmu ke Amal, Dari Teori ke Praktik # 网站描述 [ID] UBAH: Deskripsi web untuk SEO Google
+  avatar: /img/avatarnews.gif # 网站头像 [ID] URL Foto Profil (Biarkan dulu jika belum diganti fotonya)
   showLogo: true # 是否显示 Logo
-  author: Author # 作者名称 - 请修改为你的名字
-  url: https://koharu.cosine.ren # 站点 URL 用于 RSS 和 SEO
-  defaultOgImage: /img/avatar.webp # 默认 Open Graph 图片
-  startYear: 2024 # 建站年份
-  timezone: Asia/Shanghai # 时区配置 (IANA 格式)，用于日期显示和处理
-  keywords: # SEO 关键词 (全局)
-    - 博客
-    - Astro
-    - 技术
-    - 前端
+  author: shl project # 作者名称 - 请修改为你的名字 [ID] UBAH: Nama lengkap Anda
+  url: https://shl-ekonomi-vercel-git-main-shl-project-accs-projects.vercel.app/post/astro-6-migration # 站点 URL 用于 RSS 和 SEO [ID] UBAH: Masukkan link web Vercel Anda di sini
+  defaultOgImage: /img/avatarnews.gif # 默认 Open Graph 图片
+  startYear: 1998 # 建站年份 [ID] Tahun rilis web (Bisa diubah ke 2025 atau 2026)
+  timezone: Asia/Jakarta # 时区配置 (IANA 格式)，用于日期显示和处理 [ID] UBAH: Ganti menjadi Asia/Jakarta
+  keywords: # SEO 关键词 (全局) [ID] Kata kunci pencarian web Anda
+    - Blog # [ID] Blog
+    - Astro # [ID] Astro
+    - Ekonomi # [ID] Ekonomi
+    - Manajemen # [ID] Manajemen
+    - Bisnis # [ID] Teknologi
+    - Fiqh # [ID] Front-end (Ganti kata-kata kunci ini sesuai topik web Anda)
     # 请根据你的网站内容添加关键词
   # breadcrumbHome: 首页  # 面包屑导航中首页的显示名称（默认: '首页'）
   # icp:                         # ICP 备案号（可自定义链接）
@@ -47,7 +49,7 @@ site:
 #   - label: 语言显示名称（如 '中文', 'English'）
 # -----------------------------------------------------------------------------
 i18n:
-  defaultLocale: zh
+  defaultLocale: en # [ID] UBAH: Ganti 'zh' menjadi 'en' agar bahasanya berubah jadi Inggris
   locales:
     - code: zh
       label: 中文
@@ -60,16 +62,23 @@ i18n:
 # =============================================================================
 # Category Map
 # Maps Chinese category names to URL-friendly English slugs
-# Example: '随笔' category URL becomes /categories/life
+# (Pengaturan Peta Kategori - Mengubah nama kategori menjadi URL yang ramah SEO)
 # =============================================================================
 categoryMap:
-  # Primary categories
-  随笔: life
-  笔记: note
-  工具: tools
-  周刊: weekly
+  # [ID] Kategori Utama Pilihan Anda
+  Ekonomi: ekonomi # [ID] Kategori Ekonomi
+  Manajemen: manajemen # [ID] Kategori Manajemen
+  Bisnis: bisnis # [ID] Kategori Bisnis
+  Fiqh: fiqh # [ID] Kategori Fiqh / Fikih
+  App: app # [ID] Kategori Aplikasi / Tools
+  
+  # Primary categories (Kategori Bawaan Tema)
+  随笔: life # [ID] Catatan: life
+  笔记: note # [ID] Catatan Kuliah: note
+  工具: tools # [ID] Alat: tools
+  周刊: weekly # [ID] Mingguan: weekly
   # Secondary categories (for nested paths)
-  前端: front-end
+  前端: front-end # [ID] Front-end
   # Add more as needed:
   # 书摘: reading
   # 后端: back-end
@@ -88,21 +97,37 @@ categoryMap:
 # -----------------------------------------------------------------------------
 featuredCategories:
   - link: life # 对应 categoryMap 中 随笔: life
-    label: 随笔
+    label: 随笔 # [ID] UBAH: Nama Kategori 1 yang tampil di halaman depan
     image: /img/cover/2.webp
-    description: 生活记录、随想随笔
+    description: 生活记录、随想随笔 # [ID] UBAH: Deskripsi kategori 1
   - link: note # 对应 categoryMap 中 笔记: note
-    label: 笔记
+    label: 笔记 # [ID] UBAH: Nama Kategori 2
     image: /img/cover/4.webp
-    description: 技术笔记、学习笔记
+    description: 技术笔记、学习笔记 # [ID] UBAH: Deskripsi kategori 2
   - link: note/front-end # 嵌套分类：笔记/前端
-    label: 前端
+    label: 前端 # [ID] UBAH: Nama Kategori 3
     image: /img/cover/1.webp
-    description: 前端技术相关
+    description: 前端技术相关 # [ID] UBAH: Deskripsi kategori 3
   - link: tools # 对应 categoryMap 中 工具: tools
-    label: 工具
+    label: 工具 # [ID] UBAH: Nama Kategori 4
     image: /img/cover/11.webp
-    description: 工具使用、效率提升
+    description: 工具使用、效率提升 # [ID] UBAH: Deskripsi kategori 4
+  - link: ekonomi # [ID] Sesuai dengan kategori slug di categoryMap
+    label: Ekonomi # [ID] Judul yang tampil di atas gambar
+    image: /img/cover/2.webp # [ID] Lokasi gambar sampul (bisa diganti gambarnya di folder public)
+    description: Catatan seputar ekonomi # [ID] Deskripsi singkat
+  - link: manajemen
+    label: Manajemen
+    image: /img/cover/4.webp
+    description: Teori dan praktik manajemen
+  - link: bisnis
+    label: Bisnis
+    image: /img/cover/1.webp
+    description: Dunia bisnis dan strategi
+  - link: fiqh
+    label: Fiqh
+    image: /img/cover/11.webp
+    description: Kajian ilmu fiqh
 
 # =============================================================================
 # Featured Series
@@ -124,9 +149,9 @@ featuredCategories:
 featuredSeries:
   - slug: weekly # URL 路径: /weekly
     categoryName: 周刊 # 必须与 categoryMap 中的分类名匹配
-    label: 我的周刊 # 简短名称
-    fullName: 我的技术周刊 # 完整名称
-    description: | # 支持多行 Markdown
+    label: 我的周刊 # 简短名称 [ID] UBAH: Nama pendek seri di sidebar
+    fullName: 我的技术周刊 # 完整名称 [ID] UBAH: Nama panjang seri
+    description: | # 支持多行 Markdown [ID] UBAH: Deskripsi seri (boleh teks panjang)
       这是周刊/系列文章功能的示例配置。
       你可以用它来发布定期更新的系列内容，如技术周刊、读书笔记系列等。
       设置 enabled: false 可以关闭此功能。
@@ -162,17 +187,30 @@ featuredSeries:
 # -----------------------------------------------------------------------------
 social:
   github:
-    url: https://github.com/your-username # 替换为你的 GitHub 链接
-    icon: ri:github-fill # Remix Icon 的 GitHub 图标
-    color: '#191717' # (可选) 图标颜色
+    url: https://github.com/your-username # [ID] Ganti dengan link GitHub Anda
+    icon: ri:github-fill
+    color: '#191717'
   email:
-    url: mailto:your@email.com # 替换为你的邮箱，需加 mailto: 前缀
+    url: mailto:your@email.com # [ID] Ganti dengan email Anda
     icon: ri:mail-line
     color: '#55acd5'
   rss:
-    url: /rss.xml # 站内 RSS 订阅地址
+    url: /rss.xml
     icon: ri:rss-line
     color: '#ff6600'
+  # [ID] Tambahan Media Sosial Baru
+  youtube:
+    url: https://youtube.com/@your-username # [ID] Ganti dengan link channel YouTube Anda
+    icon: ri:youtube-fill
+    color: '#ff0000'
+  facebook:
+    url: https://facebook.com/your-username # [ID] Ganti dengan link Facebook Anda
+    icon: ri:facebook-fill
+    color: '#1877f2'
+  telegram:
+    url: https://t.me/your-username # [ID] Ganti dengan link Telegram Anda
+    icon: ri:telegram-fill
+    color: '#229ed9'
   # -------------------------------------------------------------------------
   # 以下是更多可选的社交平台配置示例，取消注释并修改即可启用：
   # -------------------------------------------------------------------------
@@ -213,10 +251,10 @@ social:
 # -----------------------------------------------------------------------------
 friends:
   intro:
-    title: 友情链接 # 页面标题
-    subtitle: 欢迎交换友链！ # 页面副标题
-    applyTitle: 申请友链 # 申请区块标题
-    applyDesc: 请在本页留言，格式如下 # 申请说明
+    title: 友情链接 # 页面标题 [ID] Judul Halaman Teman
+    subtitle: 欢迎交换友链！ # 页面副标题 [ID] Sub-judul
+    applyTitle: 申请友链 # 申请区块标题 [ID] Judul form
+    applyDesc: 请在本页留言，格式如下 # 申请说明 [ID] Keterangan
     exampleYaml: | # 申请格式示例，会显示在页面上
       - site: 你的博客名称 # 站点名称
         url: https://your-blog.com/ # 站点网址
@@ -224,7 +262,7 @@ friends:
         desc: 站点简介 # 站点简介
         image: https://your-blog.com/avatar.jpg # 头像链接
         color: "#ffc0cb" # 主题色（可选）
-  data: # 友链列表
+  data: # 友链列表 [ID] Daftar Teman yang Tampil
     - site: 余弦の博客
       url: https://blog.cosine.ren
       owner: cos
@@ -356,58 +394,66 @@ content:
 
 # =============================================================================
 # Navigation Routes
-# 导航菜单配置 - 定义顶部导航栏的菜单项
+# 导航菜单配置 - 定义顶部导航栏的菜单项 (Pengaturan Menu Navigasi Atas)
 # =============================================================================
-# 字段说明：
-#   name: 菜单项显示名称
-#   path: 链接路径（有 children 时可省略，点击展开子菜单）
-#   icon: Iconify 图标标识，格式 "集合:图标名"
-#   children: (可选) 子菜单列表，结构与父级相同
-# -----------------------------------------------------------------------------
-# 图标参考：
-#   - Font Awesome 6: https://icon-sets.iconify.design/fa6-solid/
-#   - Remix Icon: https://icon-sets.iconify.design/ri/
+# 字段说明 (Keterangan Field):
+#   name: 菜单项显示名称 (Nama menu yang tampil)
+#   path: 链接路径（有 children 时可省略，点击展开子菜单） (Link URL, bisa dikosongkan jika punya sub-menu)
+#   icon: Iconify 图标标识，格式 "集合:图标名" (Kode ikon Iconify)
+#   children: (可选) 子菜单列表，结构与父级相同 (Sub-menu / Menu dropdown pilihan)
 # -----------------------------------------------------------------------------
 navigation:
-  - name: 首页 # 菜单显示名称（nameKey 不存在时的回退文本）
-    nameKey: nav.home # i18n 翻译 key
-    path: / # 链接路径
-    icon: ri:home-heart-fill # 图标
-  # - name: 书摘
-  #   path: /reading
-  - name: 周刊
+  - name: Home
+    nameKey: nav.home
+    path: /
+    icon: ri:home-heart-fill
+  - name: About
+    nameKey: nav.about
+    icon: fa6-regular:circle-user
+    children:
+      - name: About Me
+        path: /about
+        icon: fa6-regular:circle-user
+      - name: Friends
+        nameKey: nav.friends
+        path: /friends
+        icon: ri:links-line
+      - name: Contact Us
+        path: /contact
+        icon: ri:mail-send-line
+      - name: Privacy Policy
+        path: /privacy
+        icon: ri:shield-user-line
+      - name: TOC
+        path: /terms
+        icon: ri:file-text-line
+      - name: Disclaimer
+        path: /disclaimer
+        icon: ri:error-warning-line
+  - name: Weekly
     nameKey: nav.weekly
     path: /weekly
     icon: ri:newspaper-line
-  - name: 文章 # 有子菜单时，path 可省略
+  - name: Posts
     nameKey: nav.posts
     icon: ri:quill-pen-ai-fill
-    children: # 子菜单列表
-      - name: 分类
+    children:
+      - name: Categories
         nameKey: nav.categories
         path: /categories
         icon: ri:grid-fill
-      - name: 标签
+      - name: Tags
         nameKey: nav.tags
         path: /tags
         icon: fa6-solid:tags
-      - name: 归档
+      - name: Archives
         nameKey: nav.archives
         path: /archives
         icon: ri:archive-2-fill
-  - name: 友链
-    nameKey: nav.friends
-    path: /friends
-    icon: ri:links-line
-  - name: 关于
-    nameKey: nav.about
-    path: /about
-    icon: fa6-regular:circle-user
-  - name: 歌单
+  - name: Music
     nameKey: nav.music
     path: /music
     icon: ri:music-2-fill
-
 # =============================================================================
 # Christmas/Seasonal Features
 # 圣诞/季节性装饰功能 - 节日期间的特殊视觉效果 后续考虑新增 theme.yaml 来管理
