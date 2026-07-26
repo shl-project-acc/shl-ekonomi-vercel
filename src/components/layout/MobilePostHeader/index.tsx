@@ -15,6 +15,7 @@ import { siteConfig } from '@/constants/site-config';
 import { HeadingTitle } from './HeadingTitle';
 import { MobileTOCDropdown } from './MobileTOCDropdown';
 import { ProgressCircle } from './ProgressCircle';
+import test from 'node:test';
 
 interface MobilePostHeaderProps {
   /** Whether the current page is a post page */
@@ -134,5 +135,5 @@ export function MobilePostHeader({
         </AnimatePresence>
       </div>
     </LazyMotionProvider>
-  );
+  )
 }
