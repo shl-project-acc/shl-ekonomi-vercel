@@ -1,5 +1,6 @@
 ---
 title: Panduan Lengkap Mengelola Dana Darurat
+link: manajemen/Panduan-Lengkap-Mengelola-Dana-Darurat
 draft: true
 sticky: false
 tocNumbering: true
