@@ -39,6 +39,7 @@ Nah, di jurnal minggu ini, aku mau membedah secara tuntas metode belajar cepat, 
 Sebelum masuk ke teknik belajar, hal pertama yang harus diretas adalah *mindset*-mu sendiri. Banyak orang gagal paham ekonomi karena mereka menganggapnya sebagai "Ilmu Pasti" yang isinya cuma rumus dan angka. 
 
 Kenyataannya, angka dan grafik di ekonomi itu hanyalah **alat bantu** untuk menjelaskan perilaku manusia.
+![belajar-cerdas.webp](/img/cover/belajar-cerdas.webp)
 
 Inti dari ekonomi adalah tentang bagaimana manusia mengatasi keterbatasan. Setiap kali kamu harus memilih antara: *"Uang 50 ribu ini mending buat langganan Netflix bulan ini, atau buat beli kuota internet ya?"*, kamu sedang mempraktikkan konsep **Biaya Peluang (Opportunity Cost)**. 
 
