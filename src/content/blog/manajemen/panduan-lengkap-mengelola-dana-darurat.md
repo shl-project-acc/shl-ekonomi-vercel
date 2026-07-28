@@ -7,7 +7,7 @@ excludeFromSummary: false
 math: false
 quiz: false
 date: 2026-07-28 16:07:46
-updated: 2026-07-28 16:44:36
+updated: 2026-07-28 16:49:17
 categories:
   - [Manajemen]
 tags:
@@ -48,7 +48,7 @@ Ketiga, ini bakal **ngelindungin investasi kamu**. Kalau kamu udah mulai nabung 
 
 Nah, ini pertanyaan yang paling sering muncul. Angkanya beda-beda buat tiap orang. Kuncinya ada di **pengeluaran pokok bulanan** kamu, bukan dari berapa gajimu. Pengeluaran pokok ini maksudnya biaya makan, bayar kos/cicilan rumah, tagihan listrik, air, transportasi, dan asuransi (kalau ada). Biaya nongkrong atau langganan *streaming* film nggak usah dihitung, ya!
 
-![ilustrasi-ketika-terjadi-hal-darurat.webp](</img/gambar isi/ilustrasi-ketika-terjadi-hal-darurat.webp>)
+![Panduan-lengkap-mengelola-dana-darurat.webp](/img/cover/Panduan-lengkap-mengelola-dana-darurat.webp)
 
 Biar gampang, begini panduan hitungannya:
 
@@ -76,7 +76,7 @@ Ketiga, **pisahkan rekeningnya**. Ini hukumnya wajib. Jangan biarin uang dana da
 
 Keempat, **bikin target jangka pendek**. Kalau nabung buat target 6 bulan kerasa terlalu berat, mulai aja dulu dengan target ngumpulin 1 bulan pengeluaran. Kalau udah tercapai, rayakan kemenangan kecilmu, lalu lanjut ke target 2 bulan, dan seterusnya. Pelan tapi pasti!
 
-![ilustrasi-ketika-terjadi-hal-darurat.webp"](</img/gambar isi/ilustrasi-ketika-terjadi-hal-darurat.webp">)
+![ilustrasi-ketika-terjadi-hal-darurat.webp](</img/gambar/ilustrasi-ketika-terjadi-hal-darurat.webp>)
 
 ### Jangan Asal Pakail lho, Kapan Boleh dan Nggak Boleh Digunakan?
 
