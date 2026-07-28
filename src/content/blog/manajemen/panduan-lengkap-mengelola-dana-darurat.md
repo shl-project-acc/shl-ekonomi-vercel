@@ -1,14 +1,13 @@
 ---
-link: 'manajemen/panduan-lengkap-mengelola-dana-darurat'
 title: Panduan Lengkap Mengelola Dana Darurat
-draft: false
+draft: true
 sticky: false
 tocNumbering: true
 excludeFromSummary: false
 math: false
 quiz: false
 date: 2026-07-28 16:07:46
-updated: 2026-07-28 16:26:06
+updated: 2026-07-28 16:44:36
 categories:
   - [Manajemen]
 tags:
@@ -49,7 +48,7 @@ Ketiga, ini bakal **ngelindungin investasi kamu**. Kalau kamu udah mulai nabung 
 
 Nah, ini pertanyaan yang paling sering muncul. Angkanya beda-beda buat tiap orang. Kuncinya ada di **pengeluaran pokok bulanan** kamu, bukan dari berapa gajimu. Pengeluaran pokok ini maksudnya biaya makan, bayar kos/cicilan rumah, tagihan listrik, air, transportasi, dan asuransi (kalau ada). Biaya nongkrong atau langganan *streaming* film nggak usah dihitung, ya!
 
-![Panduan-lengkap-mengelola-dana-darurat.webp"]("/img/cover/Panduan-lengkap-mengelola-dana-darurat.webp")
+![ilustrasi-ketika-terjadi-hal-darurat.webp](</img/gambar isi/ilustrasi-ketika-terjadi-hal-darurat.webp>)
 
 Biar gampang, begini panduan hitungannya:
 
