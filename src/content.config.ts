@@ -27,38 +27,46 @@ const dateInSiteTimezone = z
     return parseDateInSiteTimezone(val);
   });
 
+// [MODIFIKASI] Memisahkan schema ke variabel baru bernama postSchema
+// agar bentuk data ini bisa dipakai barengan untuk folder Blog dan Weekly.
+const postSchema = z.object({
+  title: z.string(),
+  description: z.string().optional(),
+  link: z.string().optional(),
+  date: dateInSiteTimezone,
+  updated: dateInSiteTimezone.optional(),
+  cover: z.string().optional(),
+  tags: z.array(z.string()).optional(),
+  // Preserve compatibility with posts migrated from Hexo.
+  subtitle: z.string().optional(),
+  catalog: z.boolean().optional().default(true),
+  categories: z
+    .array(z.string())
+    .or(z.array(z.array(z.string())))
+    .optional(),
+  sticky: z.boolean().optional(),
+  draft: z.boolean().optional(),
+  // Allow posts to opt out of numbered table-of-contents headings.
+  tocNumbering: z.boolean().optional().default(true),
+  // Allow posts to opt out of AI-generated summaries.
+  excludeFromSummary: z.boolean().optional(),
+  // Shoka features per-post toggle
+  math: z.boolean().optional(),
+  quiz: z.boolean().optional(),
+  password: z.string().optional(),
+  /** Keywords for SEO */
+  keywords: z.array(z.string()).optional(),
+}) satisfies z.ZodType<BlogSchema, BlogSchemaInput>;
+
+// [BAWAAN TEMPLATE] Definisi koleksi untuk membaca folder 'blog'
+// (Karena folder weekly Anda ada di dalam src/content/blog/weekly, 
+// otomatis akan terpindai oleh glob pattern dari blogCollection ini)
 const blogCollection = defineCollection({
   loader: glob({ pattern: BLOG_CONTENT_GLOB_PATTERN, base: './src/content/blog' }),
-  schema: z.object({
-    title: z.string(),
-    description: z.string().optional(),
-    link: z.string().optional(),
-    date: dateInSiteTimezone,
-    updated: dateInSiteTimezone.optional(),
-    cover: z.string().optional(),
-    tags: z.array(z.string()).optional(),
-    // Preserve compatibility with posts migrated from Hexo.
-    subtitle: z.string().optional(),
-    catalog: z.boolean().optional().default(true),
-    categories: z
-      .array(z.string())
-      .or(z.array(z.array(z.string())))
-      .optional(),
-    sticky: z.boolean().optional(),
-    draft: z.boolean().optional(),
-    // Allow posts to opt out of numbered table-of-contents headings.
-    tocNumbering: z.boolean().optional().default(true),
-    // Allow posts to opt out of AI-generated summaries.
-    excludeFromSummary: z.boolean().optional(),
-    // Shoka features per-post toggle
-    math: z.boolean().optional(),
-    quiz: z.boolean().optional(),
-    password: z.string().optional(),
-    /** Keywords for SEO */
-    keywords: z.array(z.string()).optional(),
-  }) satisfies z.ZodType<BlogSchema, BlogSchemaInput>,
+  schema: postSchema,
 });
 
+// [MODIFIKASI] Mengembalikan ekspor koleksi ke format utama blog
 export const collections = {
   blog: blogCollection,
 };

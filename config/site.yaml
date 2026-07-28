@@ -76,7 +76,7 @@ categoryMap:
   随笔: life # [ID] Catatan: life
   笔记: note # [ID] Catatan Kuliah: note
   工具: tools # [ID] Alat: tools
-  周刊: weekly # [ID] Mingguan: weekly
+  Weekly: weekly # [ID] Mingguan: weekly
   # Secondary categories (for nested paths)
   前端: front-end # [ID] Front-end
   # Add more as needed:
@@ -132,13 +132,12 @@ featuredCategories:
 # -----------------------------------------------------------------------------
 featuredSeries:
   - slug: weekly # URL 路径: /weekly
-    categoryName: 周刊 # 必须与 categoryMap 中的分类名匹配
-    label: 我的周刊 # 简短名称 [ID] UBAH: Nama pendek seri di sidebar
-    fullName: 我的技术周刊 # 完整名称 [ID] UBAH: Nama panjang seri
+    categoryName: Weekly # 必须与 categoryMap 中的分类名匹配
+    label: Weekly # 简短名称 [ID] UBAH: Nama pendek seri di sidebar
+    fullName: Weekly # 完整名称 [ID] UBAH: Nama panjang seri
     description: | # 支持多行 Markdown [ID] UBAH: Deskripsi seri (boleh teks panjang)
-      这是周刊/系列文章功能的示例配置。
-      你可以用它来发布定期更新的系列内容，如技术周刊、读书笔记系列等。
-      设置 enabled: false 可以关闭此功能。
+     Kumpulan catatan mingguan, artikel pilar ekonomi, dan tips belajar santai 
+      yang diperbarui secara berkala. Selamat membaca dan semoga bermanfaat!
     cover: /img/weekly_header.webp # 系列页面头图
     enabled: true # 启用此系列
     icon: ri:newspaper-line # 导航图标
