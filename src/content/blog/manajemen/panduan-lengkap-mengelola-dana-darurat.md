@@ -1,4 +1,5 @@
 ---
+link: 'manajemen/panduan-lengkap-mengelola-dana-darurat'
 title: Panduan Lengkap Mengelola Dana Darurat
 draft: true
 sticky: false
