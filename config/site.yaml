@@ -96,22 +96,6 @@ categoryMap:
 #   description: 分类描述文字，显示在卡片上
 # -----------------------------------------------------------------------------
 featuredCategories:
-  - link: life # 对应 categoryMap 中 随笔: life
-    label: 随笔 # [ID] UBAH: Nama Kategori 1 yang tampil di halaman depan
-    image: /img/cover/2.webp
-    description: 生活记录、随想随笔 # [ID] UBAH: Deskripsi kategori 1
-  - link: note # 对应 categoryMap 中 笔记: note
-    label: 笔记 # [ID] UBAH: Nama Kategori 2
-    image: /img/cover/4.webp
-    description: 技术笔记、学习笔记 # [ID] UBAH: Deskripsi kategori 2
-  - link: note/front-end # 嵌套分类：笔记/前端
-    label: 前端 # [ID] UBAH: Nama Kategori 3
-    image: /img/cover/1.webp
-    description: 前端技术相关 # [ID] UBAH: Deskripsi kategori 3
-  - link: tools # 对应 categoryMap 中 工具: tools
-    label: 工具 # [ID] UBAH: Nama Kategori 4
-    image: /img/cover/11.webp
-    description: 工具使用、效率提升 # [ID] UBAH: Deskripsi kategori 4
   - link: ekonomi # [ID] Sesuai dengan kategori slug di categoryMap
     label: Ekonomi # [ID] Judul yang tampil di atas gambar
     image: /img/cover/2.webp # [ID] Lokasi gambar sampul (bisa diganti gambarnya di folder public)
@@ -697,7 +681,7 @@ bangumi:
 #   - urlTemplate: URL 模板，支持占位符 {path}（文件绝对路径）
 # -----------------------------------------------------------------------------
 dev:
-  localProjectPath: '/Users/yourname/path/to/astro-koharu' # 请修改为你的项目绝对路径
+  localProjectPath: 'D:\12. BUAT WEB\SHL PROJECT\EKONOMI\shl project\shl project' # 请修改为你的项目绝对路径
   contentRelativePath: 'src/content/blog'
   editors:
     - id: vscode
