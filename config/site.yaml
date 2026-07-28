@@ -438,6 +438,7 @@ navigation:
     nameKey: nav.music
     path: /music
     icon: ri:music-2-fill
+    
 # =============================================================================
 # Christmas/Seasonal Features
 # 圣诞/季节性装饰功能 - 节日期间的特殊视觉效果 后续考虑新增 theme.yaml 来管理
@@ -661,8 +662,8 @@ christmas:
 #   label: 导航显示名称（可选，默认：追番）
 #   icon: 导航图标，Iconify 格式（可选，默认：ri:bilibili-fill）
 # -----------------------------------------------------------------------------
-bangumi:
-  userId: cosine
+#bangumi:
+#  userId: cosine
   # label: 追番
   # icon: ri:bilibili-fill
 
