@@ -10,7 +10,7 @@ quiz: false
 date: 2026-07-28 09:24:46
 updated: 2026-07-28 10:02:43
 categories:
-  - [manajemen]
+  - [Manajemen]
 tags:
   - keuangan
   - investasi
