@@ -1,6 +1,6 @@
 ---
 title: Pentingnya Belajar Manajemen Keuangan Sejak Muda
-link: pentingnya-belajar-manajemen-keuangan-sejak-muda
+link: manajemen/pentingnya-belajar-manajemen-keuangan-sejak-muda
 draft: false
 sticky: false
 tocNumbering: true
