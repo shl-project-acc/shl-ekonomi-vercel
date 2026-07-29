@@ -1,6 +1,6 @@
 ---
 title: Langkah Mudah Riset Bisnis
-link: bisnis/Langkah-Mudah-Riset-Bisnis
+title: bisnis/Langkah-Mudah-Riset-Bisnis
 draft: false
 sticky: false
 tocNumbering: true
@@ -8,7 +8,7 @@ excludeFromSummary: false
 math: false
 quiz: false
 date: 2026-07-29 11:46:41
-updated: 2026-07-29 11:53:21
+updated: 2026-07-29 11:59:18
 categories:
   - [Bisnis]
 tags:
