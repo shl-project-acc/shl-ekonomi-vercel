@@ -1,6 +1,6 @@
 ---
 title: Langkah Mudah Riset Bisnis
-title: bisnis/Langkah-Mudah-Riset-Bisnis
+link: bisnis/Langkah-Mudah-Riset-Bisnis
 draft: false
 sticky: false
 tocNumbering: true
